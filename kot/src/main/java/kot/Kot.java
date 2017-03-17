@@ -72,7 +72,7 @@ public class Kot {
 		String imie = odczyt();
 		System.out.println("Podaj imiê w³aœciciela: ");
 		String opiekun = odczyt();
-		System.out.println("Podaj datê urodzenia kota: ");
+//		System.out.println("Podaj datê urodzenia kota: ");
 //		Date dataUr= odczyt();
 		Date data = new Date();
 		Double masa = 0.001;
