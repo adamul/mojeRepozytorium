@@ -9,7 +9,7 @@ public class Kot {
 
 	private String imie;
 	private String opiekun;
-	private static Date dataUr;
+	private Date dataUr;
 	private Double masa;
 
 	Kot(String imie, String opiekun, Date dataUr, Double masa){
@@ -17,9 +17,12 @@ public class Kot {
 		this.opiekun=opiekun;
 		this.dataUr=dataUr;
 		this.masa=masa;
-		DateFormat format = new SimpleDateFormat("dd-MM-yyyy, HH:mm:ss");
+		DateFormat dF = new SimpleDateFormat("dd-MM-yyyy");
+		DateFormat dT = new SimpleDateFormat("HH:mm:ss");
+		
 		System.out.println("Konstruktor utworzy³ kota o imieniu: "+getImie()+"\nktórego opiekunem jest "+opiekun
-				+"\nKot urodzi³ siê "+format.format(dataUr)+"\nMasa urodzeniowa wynosi "+masa+" kg");
+				+"\nKot urodzi³ siê "+dF.format(dataUr)+"r. o godzinie "+dT.format(dataUr)
+				+"\nMasa urodzeniowa wynosi "+masa+" kg");
 	}
 	
 	public String getImie() {
@@ -73,7 +76,7 @@ public class Kot {
 //		Date dataUr= odczyt();
 		Date data = new Date();
 		Double masa = 0.001;
-		DodKot(imie, opiekun, dataUr, masa);
+		DodKot(imie, opiekun, data, masa);
 	}
 	
 	public static void main(String[] args) {
